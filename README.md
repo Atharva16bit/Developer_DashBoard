@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+HEAD
 # 🤖 AI & Developer Dashboard
 
 A curated, searchable directory of 150+ AI and developer tools — writing, research, coding, design, automation, and more — all in one place.
@@ -79,7 +79,7 @@ MIT — feel free to fork and adapt for your own tool collection.
 
 ---
 
-Built by [Your Name](https://linkedin.com/in/your-profile) — a personal directory of the AI/dev tools I actually use, refactored into a small data-driven web app.
+Built by [Atharva Patankar]([https://linkedin.com/in/your-profile](https://www.linkedin.com/in/atharva-patankar-320580384/)) — a personal directory of the AI/dev tools I actually use, refactored into a small data-driven web app.
 =======
 Developer Dashboard is a curated AI resource platform designed to help users discover and choose the most suitable AI tools based on their specific use cases. Instead of overwhelming users with hundreds of AI applications, the platform organizes carefully selected tools into structured categories such as Coding & Development, Content Creation, Research & Learning, Design & Creativity, Productivity, Automation, and more. Each category enables users to quickly identify the best AI solutions for their needs, whether they are writing code, generating content, conducting research, creating designs, analyzing data, or improving workflow efficiency. Built with HTML, CSS, and JavaScript, the website provides a clean, responsive, and user-friendly interface that simplifies AI tool discovery and comparison. The goal of Developer Dashboard is to serve as a centralized directory of high-quality AI resources, helping students, developers, creators, professionals, and businesses navigate the rapidly growing AI ecosystem and find the right tools without wasting time on extensive searching and evaluation.
 >>>>>>> 7234aa42a0998cb8c065190b7fcb2cc6deb1f000
