@@ -3,287 +3,164 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI & Developer Dashboard</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
 
-      :root {
-        --bg: #0f172a;
-        --card: #1e293b;
-        --text: #ffffff;
-        --accent: #3b82f6;
-        --header: linear-gradient(135deg, #2760dc, #4f00d7);
-      }
+    <title>AI & Developer Dashboard — 150+ Curated AI & Dev Tools</title>
+    <meta
+      name="description"
+      content="A curated, searchable directory of 150+ AI and developer tools across writing, research, coding, design, automation, and video. Free and paid options for every workflow."
+    />
+    <meta
+      name="keywords"
+      content="AI tools, developer tools, AI directory, coding tools, productivity tools, free AI tools, AI tool list"
+    />
+    <meta name="author" content="Your Name" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://your-domain.com/" />
 
-      body {
-        font-family: "Segoe UI", sans-serif;
-        background: var(--bg);
-        color: var(--text);
-      }
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="AI & Developer Dashboard — 150+ Curated AI & Dev Tools"
+    />
+    <meta
+      property="og:description"
+      content="A searchable directory of 150+ AI and developer tools — writing, research, coding, design, automation, and more, all in one place."
+    />
+    <meta
+      property="og:image"
+      content="https://your-domain.com/assets/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://your-domain.com/" />
+    <meta property="og:site_name" content="AI & Developer Dashboard" />
 
-      header {
-        background: var(--header);
-        padding: 50px 20px;
-        text-align: center;
-      }
+    <!-- ============ Favicons ============ -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/site.webmanifest" />
 
-      header h1 {
-        font-size: 3rem;
-      }
+    <!-- ============ Performance ============ -->
+    <link rel="preconnect" href="https://www.google.com" />
+    <link rel="dns-prefetch" href="https://www.google.com" />
+    <link rel="preload" href="tools.json" as="fetch" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
 
-      header p {
-        margin-top: 10px;
-        opacity: 0.9;
+    <!-- ============ Structured Data (JSON-LD) ============ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AI & Developer Dashboard",
+        "description": "A curated, searchable directory of 150+ AI and developer tools.",
+        "url": "https://your-domain.com/"
       }
-
-      section {
-        width: 90%;
-        max-width: 1300px;
-        margin: 40px auto;
-      }
-
-      section h2 {
-        margin-bottom: 20px;
-        border-left: 6px solid var(--accent);
-        padding-left: 12px;
-      }
-
-      .tools {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-        gap: 15px;
-      }
-
-      .tool {
-        background: var(--card);
-        padding: 18px;
-        border-radius: 12px;
-        text-align: center;
-        text-decoration: none;
-        color: var(--text);
-        transition: 0.3s;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        display: block;
-      }
-
-      .tool:hover {
-        transform: translateY(-5px);
-        background: var(--accent);
-      }
-
-      footer {
-        text-align: center;
-        padding: 30px;
-        margin-top: 50px;
-        background: #111827;
-        color: white;
-      }
-
-      .stats {
-        text-align: center;
-        margin-top: 20px;
-      }
-    </style>
+    </script>
   </head>
 
   <body>
     <header>
-      <h1>AI & Developer Dashboard</h1>
-      <p>One Place for Coding, AI, Research, Creativity & Productivity</p>
+      <div class="hero">
+        <h1>AI & Developer Dashboard</h1>
+        <p class="hero-tagline">
+          One Place for Coding, AI, Research, Creativity & Productivity
+        </p>
+        <div class="hero-stats">
+          <span>151 Tools</span>
+          <span class="hero-dot" aria-hidden="true">•</span>
+          <span>17 Categories</span>
+          <span class="hero-dot" aria-hidden="true">•</span>
+          <span>Free &amp; Paid</span>
+        </div>
+        <a href="#category-nav" class="hero-scroll">
+          Explore Tools
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+        </a>
+      </div>
     </header>
 
-    <section>
-      <h2>Social Media</h2>
-      <div class="tools">
-        <a class="tool" href="https://youtube.com" target="_blank">YouTube</a>
-        <a class="tool" href="https://instagram.com" target="_blank"
-          >Instagram</a
-        >
-        <a class="tool" href="https://twitter.com" target="_blank">Twitter/X</a>
-        <a class="tool" href="https://facebook.com" target="_blank">Facebook</a>
-        <a class="tool" href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a class="tool" href="https://reddit.com" target="_blank">Reddit</a>
-        <a class="tool" href="https://discord.com" target="_blank">Discord</a>
-        <a class="tool" href="https://telegram.org" target="_blank">Telegram</a>
+    <div class="sticky-header">
+      <div class="controls">
+        <div class="search-wrap">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Search tools by name…"
+            autocomplete="off"
+            aria-label="Search tools"
+          />
+        </div>
+        <div class="filter-group" role="group" aria-label="Filter by pricing">
+          <button class="filter-btn is-active" data-pricing="all" type="button">
+            All
+          </button>
+          <button class="filter-btn" data-pricing="free" type="button">
+            Free
+          </button>
+          <button class="filter-btn" data-pricing="paid" type="button">
+            Paid
+          </button>
+        </div>
       </div>
-    </section>
 
-    <section>
-      <h2>Coding & Development</h2>
-      <div class="tools">
-        <a class="tool" href="https://github.com" target="_blank">GitHub</a>
-        <a class="tool" href="https://gitlab.com" target="_blank">GitLab</a>
-        <a class="tool" href="https://stackoverflow.com" target="_blank"
-          >Stack Overflow</a
-        >
-        <a class="tool" href="https://developer.mozilla.org" target="_blank"
-          >MDN Docs</a
-        >
-        <a class="tool" href="https://codepen.io" target="_blank">CodePen</a>
-        <a class="tool" href="https://codesandbox.io" target="_blank"
-          >CodeSandbox</a
-        >
-        <a class="tool" href="https://replit.com" target="_blank">Replit</a>
-        <a class="tool" href="https://postman.com" target="_blank">Postman</a>
-        <a class="tool" href="https://npmjs.com" target="_blank">NPM</a>
-        <a class="tool" href="https://vercel.com" target="_blank">Vercel</a>
-        <a class="tool" href="https://netlify.com" target="_blank">Netlify</a>
-        <a class="tool" href="https://docker.com" target="_blank">Docker</a>
-      </div>
-    </section>
+      <nav
+        class="category-nav"
+        id="category-nav"
+        aria-label="Jump to category"
+      ></nav>
+    </div>
 
-    <section>
-      <h2>AI Research & Analysis</h2>
-      <div class="tools">
-        <a class="tool" href="https://chatgpt.com" target="_blank">ChatGPT</a>
-        <a class="tool" href="https://claude.ai" target="_blank">Claude</a>
-        <a class="tool" href="https://gemini.google.com" target="_blank"
-          >Gemini</a
-        >
-        <a class="tool" href="https://perplexity.ai" target="_blank"
-          >Perplexity</a
-        >
-        <a class="tool" href="https://consensus.app" target="_blank"
-          >Consensus</a
-        >
-        <a class="tool" href="https://elicit.com" target="_blank">Elicit</a>
-        <a class="tool" href="https://scite.ai" target="_blank">Scite</a>
-        <a class="tool" href="https://notebooklm.google.com" target="_blank"
-          >NotebookLM</a
-        >
-        <a class="tool" href="https://you.com" target="_blank">You.com</a>
-        <a class="tool" href="https://connectedpapers.com" target="_blank"
-          >Connected Papers</a
-        >
-      </div>
-    </section>
+    <main id="sections-root">
+      <!-- Sections are rendered here dynamically from tools.json by app.js -->
+    </main>
 
-    <section>
-      <h2>AI Image Generation</h2>
-      <div class="tools">
-        <a class="tool" href="https://midjourney.com" target="_blank"
-          >Midjourney</a
-        >
-        <a class="tool" href="https://chatgpt.com" target="_blank"
-          >ChatGPT Images</a
-        >
-        <a class="tool" href="https://ideogram.ai" target="_blank">Ideogram</a>
-        <a class="tool" href="https://leonardo.ai" target="_blank"
-          >Leonardo AI</a
-        >
-        <a class="tool" href="https://firefly.adobe.com" target="_blank"
-          >Adobe Firefly</a
-        >
-        <a class="tool" href="https://playground.com" target="_blank"
-          >Playground AI</a
-        >
-        <a class="tool" href="https://tensor.art" target="_blank">Tensor Art</a>
-        <a class="tool" href="https://civitai.com" target="_blank">CivitAI</a>
-      </div>
-    </section>
-
-    <section>
-      <h2>AI Video Generation</h2>
-      <div class="tools">
-        <a class="tool" href="https://openai.com/sora" target="_blank">Sora</a>
-        <a class="tool" href="https://runwayml.com" target="_blank">Runway</a>
-        <a class="tool" href="https://klingai.com" target="_blank">Kling AI</a>
-        <a class="tool" href="https://luma.ai" target="_blank">Luma</a>
-        <a class="tool" href="https://pixverse.ai" target="_blank">PixVerse</a>
-        <a class="tool" href="https://haiper.ai" target="_blank">Haiper</a>
-        <a class="tool" href="https://invideo.io" target="_blank">InVideo AI</a>
-      </div>
-    </section>
-
-    <section>
-      <h2>Creative & Design Tools</h2>
-      <div class="tools">
-        <a class="tool" href="https://figma.com" target="_blank">Figma</a>
-        <a class="tool" href="https://canva.com" target="_blank">Canva</a>
-        <a class="tool" href="https://blender.org" target="_blank">Blender</a>
-        <a class="tool" href="https://photopea.com" target="_blank">Photopea</a>
-        <a
-          class="tool"
-          href="https://adobe.com/products/photoshop.html"
-          target="_blank"
-          >Photoshop</a
-        >
-        <a
-          class="tool"
-          href="https://adobe.com/products/illustrator.html"
-          target="_blank"
-          >Illustrator</a
-        >
-        <a class="tool" href="https://capcut.com" target="_blank">CapCut</a>
-        <a
-          class="tool"
-          href="https://blackmagicdesign.com/products/davinciresolve"
-          target="_blank"
-          >DaVinci Resolve</a
-        >
-      </div>
-    </section>
-
-    <section>
-      <h2>Learning Platforms</h2>
-      <div class="tools">
-        <a class="tool" href="https://roadmap.sh" target="_blank">Roadmap.sh</a>
-        <a class="tool" href="https://leetcode.com" target="_blank">LeetCode</a>
-        <a class="tool" href="https://hackerrank.com" target="_blank"
-          >HackerRank</a
-        >
-        <a class="tool" href="https://geeksforgeeks.org" target="_blank"
-          >GeeksforGeeks</a
-        >
-        <a class="tool" href="https://freecodecamp.org" target="_blank"
-          >freeCodeCamp</a
-        >
-        <a class="tool" href="https://frontendmentor.io" target="_blank"
-          >Frontend Mentor</a
-        >
-      </div>
-    </section>
-
-    <section>
-      <h2>Cloud & Deployment</h2>
-      <div class="tools">
-        <a class="tool" href="https://aws.amazon.com" target="_blank">AWS</a>
-        <a class="tool" href="https://azure.microsoft.com" target="_blank"
-          >Azure</a
-        >
-        <a class="tool" href="https://cloud.google.com" target="_blank"
-          >Google Cloud</a
-        >
-        <a class="tool" href="https://firebase.google.com" target="_blank"
-          >Firebase</a
-        >
-        <a class="tool" href="https://railway.app" target="_blank">Railway</a>
-        <a class="tool" href="https://render.com" target="_blank">Render</a>
-      </div>
-    </section>
-
-    <section>
-      <h2>Productivity Tools</h2>
-      <div class="tools">
-        <a class="tool" href="https://notion.so" target="_blank">Notion</a>
-        <a class="tool" href="https://obsidian.md" target="_blank">Obsidian</a>
-        <a class="tool" href="https://trello.com" target="_blank">Trello</a>
-        <a class="tool" href="https://jira.com" target="_blank">Jira</a>
-        <a class="tool" href="https://slack.com" target="_blank">Slack</a>
-        <a class="tool" href="https://asana.com" target="_blank">Asana</a>
-      </div>
-    </section>
+    <p class="empty-state" id="empty-state" hidden>
+      No tools match your search. Try a different keyword or filter.
+    </p>
 
     <div class="stats">
-      <h3>Total Tools Available: 67</h3>
+      <h3 id="stats-count">Total Tools Available: 150+</h3>
     </div>
 
     <footer>
       <p>AI & Developer Dashboard © 2026</p>
     </footer>
+
+    <script src="app.js" defer></script>
   </body>
 </html>

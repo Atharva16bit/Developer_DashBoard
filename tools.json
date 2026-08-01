@@ -1,0 +1,1012 @@
+{
+  "categories": [
+    {
+      "name": "Writing",
+      "icon": "\u270d\ufe0f",
+      "tools": [
+        {
+          "id": 1,
+          "name": "Jasper",
+          "url": "https://jasperai.au/",
+          "pricing": "paid"
+        },
+        {
+          "id": 2,
+          "name": "Copy.ai",
+          "url": "https://app.copy.ai/teamspace/28762159/dashboard/folder",
+          "pricing": "paid"
+        },
+        {
+          "id": 3,
+          "name": "Sudowrite",
+          "url": "https://editor.sudowrite.com/app",
+          "pricing": "paid"
+        },
+        {
+          "id": 4,
+          "name": "Grammarly Premium",
+          "url": "https://app.grammarly.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 5,
+          "name": "Writesonic",
+          "url": "https://writesonic.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 6,
+          "name": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "pricing": "free"
+        },
+        {
+          "id": 7,
+          "name": "Claude",
+          "url": "https://claude.ai/new",
+          "pricing": "free"
+        },
+        {
+          "id": 8,
+          "name": "Hemingway Editor",
+          "url": "https://hemingwayapp.com/",
+          "pricing": "free"
+        },
+        {
+          "id": 9,
+          "name": "Quillbot",
+          "url": "https://quillbot.com/",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "Deep Research",
+      "icon": "\ud83d\udd2c",
+      "tools": [
+        {
+          "id": 10,
+          "name": "Perplexity Pro",
+          "url": "https://www.perplexity.ai/",
+          "pricing": "paid"
+        },
+        {
+          "id": 11,
+          "name": "Elicit Pro",
+          "url": "https://elicit.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 12,
+          "name": "Consensus Premium",
+          "url": "https://consensus.app/",
+          "pricing": "paid"
+        },
+        {
+          "id": 13,
+          "name": "You.com",
+          "url": "https://you.com/home",
+          "pricing": "paid"
+        },
+        {
+          "id": 14,
+          "name": "Claude Pro",
+          "url": "https://claude.ai/",
+          "pricing": "paid"
+        },
+        {
+          "id": 15,
+          "name": "Scite",
+          "url": "https://scite.ai",
+          "pricing": "paid"
+        },
+        {
+          "id": 16,
+          "name": "Connected Papers",
+          "url": "https://connectedpapers.com",
+          "pricing": "paid"
+        },
+        {
+          "id": 17,
+          "name": "Perplexity",
+          "url": "https://www.perplexity.ai/",
+          "pricing": "free"
+        },
+        {
+          "id": 18,
+          "name": "Google Notebook LM",
+          "url": "https://notebooklm.google/",
+          "pricing": "free"
+        },
+        {
+          "id": 19,
+          "name": "Elicit",
+          "url": "https://elicit.com/",
+          "pricing": "free"
+        },
+        {
+          "id": 20,
+          "name": "Gemini",
+          "url": "https://gemini.google.com",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "Tutorial",
+      "icon": "\ud83c\udf93",
+      "tools": [
+        {
+          "id": 21,
+          "name": "AI tutor, Khan Academy",
+          "url": "https://www.khanmigo.ai/",
+          "pricing": "paid"
+        },
+        {
+          "id": 22,
+          "name": "ChatGPT Plus",
+          "url": "https://chatgpt.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 23,
+          "name": "Claude Pro",
+          "url": "https://claude.ai/",
+          "pricing": "paid"
+        },
+        {
+          "id": 24,
+          "name": "Socratic",
+          "url": "https://gpt3demo.com/apps/socratic-by-google",
+          "pricing": "free"
+        },
+        {
+          "id": 25,
+          "name": "Khan Academy",
+          "url": "https://www.khanacademy.org/",
+          "pricing": "free"
+        },
+        {
+          "id": 26,
+          "name": "Google Learn About",
+          "url": "https://learning.google.com/experiments/learn-about/",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "Note Taking",
+      "icon": "\ud83d\udcdd",
+      "tools": [
+        {
+          "id": 27,
+          "name": "Notion AI",
+          "url": "https://www.notion.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 28,
+          "name": "Mem",
+          "url": "https://mem.ai/notes",
+          "pricing": "paid"
+        },
+        {
+          "id": 29,
+          "name": "Evernote Personal",
+          "url": "https://www.evernote.com/client/web",
+          "pricing": "paid"
+        },
+        {
+          "id": 30,
+          "name": "Reflect Notes",
+          "url": "https://reflect.app/",
+          "pricing": "paid"
+        },
+        {
+          "id": 31,
+          "name": "Notion Free",
+          "url": "https://www.notion.com/",
+          "pricing": "free"
+        },
+        {
+          "id": 32,
+          "name": "Obsidian",
+          "url": "https://obsidian.md/",
+          "pricing": "free"
+        },
+        {
+          "id": 33,
+          "name": "Google Keep",
+          "url": "https://keep.google.com/u/0/",
+          "pricing": "free"
+        },
+        {
+          "id": 34,
+          "name": "Apple Notes",
+          "url": "https://apps.apple.com/us/app/notes/id1110145109",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "Coding & Development",
+      "icon": "\ud83e\udd16",
+      "tools": [
+        {
+          "id": 35,
+          "name": "Zapier",
+          "url": "https://zapier.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 36,
+          "name": "Make.com",
+          "url": "https://www.make.com/en",
+          "pricing": "paid"
+        },
+        {
+          "id": 37,
+          "name": "n8n Cloud",
+          "url": "https://app.n8n.cloud/login",
+          "pricing": "paid"
+        },
+        {
+          "id": 38,
+          "name": "Pipedream",
+          "url": "https://pipedream.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 39,
+          "name": "n8n Self-Hosted",
+          "url": "https://n8n.io/",
+          "pricing": "free"
+        },
+        {
+          "id": 40,
+          "name": "IFTTT Free",
+          "url": "https://ifttt.com/",
+          "pricing": "free"
+        },
+        {
+          "id": 41,
+          "name": "Zapier Free",
+          "url": "https://zapier.com/",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "Learning Platforms",
+      "icon": "\ud83d\udcda",
+      "tools": [
+        {
+          "id": 42,
+          "name": "Coursera Plus",
+          "url": "https://www.coursera.org/",
+          "pricing": "paid"
+        },
+        {
+          "id": 43,
+          "name": "Udemy",
+          "url": "https://www.udemy.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 44,
+          "name": "Educative",
+          "url": "https://www.educative.io/",
+          "pricing": "paid"
+        },
+        {
+          "id": 45,
+          "name": "LeetCode",
+          "url": "https://leetcode.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 46,
+          "name": "freeCodeCamp",
+          "url": "https://www.freecodecamp.org/",
+          "pricing": "free"
+        },
+        {
+          "id": 47,
+          "name": "The Odin Project",
+          "url": "https://www.theodinproject.com/",
+          "pricing": "free"
+        },
+        {
+          "id": 48,
+          "name": "Khan Academy",
+          "url": "https://www.khanacademy.org/",
+          "pricing": "free"
+        },
+        {
+          "id": 49,
+          "name": "GeeksforGeeks",
+          "url": "https://www.geeksforgeeks.org/",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "Accounting & Finance",
+      "icon": "\ud83d\udcb0",
+      "tools": [
+        {
+          "id": 50,
+          "name": "QuickBooks Online",
+          "url": "https://quickbooks.intuit.com/global/online-compare/",
+          "pricing": "paid"
+        },
+        {
+          "id": 51,
+          "name": "Xero",
+          "url": "https://www.xero.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 52,
+          "name": "Freshbooks",
+          "url": "https://www.freshbooks.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 53,
+          "name": "Zoho Books",
+          "url": "https://www.zoho.com/in/books/",
+          "pricing": "paid"
+        },
+        {
+          "id": 54,
+          "name": "Wave Accounting",
+          "url": "https://www.waveapps.com/",
+          "pricing": "free"
+        },
+        {
+          "id": 55,
+          "name": "GnuCash",
+          "url": "https://www.gnucash.org/",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "Presentation",
+      "icon": "\ud83d\udcca",
+      "tools": [
+        {
+          "id": 56,
+          "name": "Gamma",
+          "url": "https://gamma.app/",
+          "pricing": "paid"
+        },
+        {
+          "id": 57,
+          "name": "Genspark AI",
+          "url": "https://www.genspark.ai/",
+          "pricing": "paid"
+        },
+        {
+          "id": 58,
+          "name": "Beautiful.ai",
+          "url": "https://www.beautiful.ai/",
+          "pricing": "paid"
+        },
+        {
+          "id": 59,
+          "name": "Canva Pro",
+          "url": "https://www.canva.com/pro/",
+          "pricing": "paid"
+        },
+        {
+          "id": 60,
+          "name": "Tome",
+          "url": "https://ppt.ai/tome-ai-ppt",
+          "pricing": "paid"
+        },
+        {
+          "id": 61,
+          "name": "Canva Free",
+          "url": "https://www.canva.com/",
+          "pricing": "free"
+        },
+        {
+          "id": 62,
+          "name": "Google Slides",
+          "url": "https://docs.google.com/presentation/",
+          "pricing": "free"
+        },
+        {
+          "id": 63,
+          "name": "Gamma Free",
+          "url": "https://gamma.app/",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "Business, Client & Workflow (CRM)",
+      "icon": "\ud83e\udd1d",
+      "tools": [
+        {
+          "id": 64,
+          "name": "Salesforce Essentials",
+          "url": "https://www.salesforce.com/essentials/",
+          "pricing": "paid"
+        },
+        {
+          "id": 65,
+          "name": "Pipedrive",
+          "url": "https://www.pipedrive.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 66,
+          "name": "Zoho CRM",
+          "url": "https://www.zoho.com/crm/",
+          "pricing": "paid"
+        },
+        {
+          "id": 67,
+          "name": "HubSpot",
+          "url": "https://www.hubspot.com/products/crm",
+          "pricing": "paid"
+        },
+        {
+          "id": 68,
+          "name": "HubSpot CRM Free",
+          "url": "https://www.hubspot.com/products/crm",
+          "pricing": "free"
+        },
+        {
+          "id": 69,
+          "name": "Zoho CRM Free",
+          "url": "https://www.zoho.com/crm/",
+          "pricing": "free"
+        },
+        {
+          "id": 70,
+          "name": "Bitrix24 Free",
+          "url": "https://www.bitrix24.com/",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "Website & App Development",
+      "icon": "\ud83c\udf10",
+      "tools": [
+        {
+          "id": 71,
+          "name": "Webflow",
+          "url": "https://webflow.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 72,
+          "name": "Framer",
+          "url": "https://www.framer.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 73,
+          "name": "Bubble",
+          "url": "https://bubble.io/",
+          "pricing": "paid"
+        },
+        {
+          "id": 74,
+          "name": "FlutterFlow",
+          "url": "https://flutterflow.io/",
+          "pricing": "paid"
+        },
+        {
+          "id": 75,
+          "name": "Replit Core",
+          "url": "https://replit.com/site/core",
+          "pricing": "paid"
+        },
+        {
+          "id": 76,
+          "name": "Replit Free",
+          "url": "https://replit.com/",
+          "pricing": "free"
+        },
+        {
+          "id": 77,
+          "name": "GitHub Pages",
+          "url": "https://pages.github.com/",
+          "pricing": "free"
+        },
+        {
+          "id": 78,
+          "name": "Vercel Hobby",
+          "url": "https://vercel.com/pricing",
+          "pricing": "free"
+        },
+        {
+          "id": 79,
+          "name": "Netlify Free",
+          "url": "https://netlify.com",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "Automation, Coding & Deployment",
+      "icon": "\u2699\ufe0f",
+      "tools": [
+        {
+          "id": 80,
+          "name": "GitHub Copilot Pro",
+          "url": "https://github.com/features/copilot",
+          "pricing": "paid"
+        },
+        {
+          "id": 81,
+          "name": "Cursor Pro",
+          "url": "https://cursor.sh/",
+          "pricing": "paid"
+        },
+        {
+          "id": 82,
+          "name": "Claude Code",
+          "url": "https://claude.com/product/claude-code",
+          "pricing": "paid"
+        },
+        {
+          "id": 83,
+          "name": "Vercel Pro",
+          "url": "https://vercel.com/pricing",
+          "pricing": "paid"
+        },
+        {
+          "id": 84,
+          "name": "Railway",
+          "url": "https://railway.app/",
+          "pricing": "paid"
+        },
+        {
+          "id": 85,
+          "name": "GitHub Copilot Free",
+          "url": "https://github.com/features/copilot",
+          "pricing": "free"
+        },
+        {
+          "id": 86,
+          "name": "VS Code",
+          "url": "https://code.visualstudio.com/",
+          "pricing": "free"
+        },
+        {
+          "id": 87,
+          "name": "Netlify Free",
+          "url": "https://www.netlify.com/pricing/",
+          "pricing": "free"
+        },
+        {
+          "id": 88,
+          "name": "Render Free",
+          "url": "https://render.com/",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "Developer Platforms & Cloud Deployment",
+      "icon": "\u2601\ufe0f",
+      "tools": [
+        {
+          "id": 89,
+          "name": "AWS",
+          "url": "https://aws.amazon.com",
+          "pricing": "paid"
+        },
+        {
+          "id": 90,
+          "name": "Azure",
+          "url": "https://azure.microsoft.com",
+          "pricing": "paid"
+        },
+        {
+          "id": 91,
+          "name": "Google Cloud",
+          "url": "https://cloud.google.com",
+          "pricing": "paid"
+        },
+        {
+          "id": 92,
+          "name": "Firebase",
+          "url": "https://firebase.google.com",
+          "pricing": "paid"
+        },
+        {
+          "id": 93,
+          "name": "Railway",
+          "url": "https://railway.app",
+          "pricing": "paid"
+        },
+        {
+          "id": 94,
+          "name": "Render",
+          "url": "https://render.com",
+          "pricing": "paid"
+        },
+        {
+          "id": 95,
+          "name": "Postman",
+          "url": "https://postman.com",
+          "pricing": "paid"
+        },
+        {
+          "id": 96,
+          "name": "Docker",
+          "url": "https://docker.com",
+          "pricing": "paid"
+        },
+        {
+          "id": 97,
+          "name": "GitHub",
+          "url": "https://github.com",
+          "pricing": "free"
+        },
+        {
+          "id": 98,
+          "name": "GitLab",
+          "url": "https://gitlab.com",
+          "pricing": "free"
+        },
+        {
+          "id": 99,
+          "name": "Stack Overflow",
+          "url": "https://stackoverflow.com",
+          "pricing": "free"
+        },
+        {
+          "id": 100,
+          "name": "MDN Docs",
+          "url": "https://developer.mozilla.org",
+          "pricing": "free"
+        },
+        {
+          "id": 101,
+          "name": "CodePen",
+          "url": "https://codepen.io",
+          "pricing": "free"
+        },
+        {
+          "id": 102,
+          "name": "CodeSandbox",
+          "url": "https://codesandbox.io",
+          "pricing": "free"
+        },
+        {
+          "id": 103,
+          "name": "NPM",
+          "url": "https://npmjs.com",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "AI Image Generation",
+      "icon": "\ud83c\udfa8",
+      "tools": [
+        {
+          "id": 104,
+          "name": "Midjourney",
+          "url": "https://midjourney.com",
+          "pricing": "paid"
+        },
+        {
+          "id": 105,
+          "name": "Adobe Firefly",
+          "url": "https://firefly.adobe.com",
+          "pricing": "paid"
+        },
+        {
+          "id": 106,
+          "name": "Leonardo AI",
+          "url": "https://leonardo.ai",
+          "pricing": "paid"
+        },
+        {
+          "id": 107,
+          "name": "Ideogram",
+          "url": "https://ideogram.ai",
+          "pricing": "paid"
+        },
+        {
+          "id": 108,
+          "name": "Leonardo Free",
+          "url": "https://leonardo.ai",
+          "pricing": "free"
+        },
+        {
+          "id": 109,
+          "name": "Playground AI",
+          "url": "https://playgroundai.com",
+          "pricing": "free"
+        },
+        {
+          "id": 110,
+          "name": "Bing / Copilot Image Creator",
+          "url": "https://www.bing.com/images/create",
+          "pricing": "free"
+        },
+        {
+          "id": 111,
+          "name": "Tensor Art",
+          "url": "https://tensor.art",
+          "pricing": "free"
+        },
+        {
+          "id": 112,
+          "name": "CivitAI",
+          "url": "https://civitai.com",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "AI Video Generation",
+      "icon": "\ud83c\udfac",
+      "tools": [
+        {
+          "id": 113,
+          "name": "Sora",
+          "url": "https://openai.com/sora",
+          "pricing": "paid"
+        },
+        {
+          "id": 114,
+          "name": "Runway",
+          "url": "https://runwayml.com",
+          "pricing": "paid"
+        },
+        {
+          "id": 115,
+          "name": "Kling AI Pro",
+          "url": "https://klingai.com",
+          "pricing": "paid"
+        },
+        {
+          "id": 116,
+          "name": "Synthesia",
+          "url": "https://www.synthesia.io/",
+          "pricing": "paid"
+        },
+        {
+          "id": 117,
+          "name": "InVideo AI",
+          "url": "https://invideo.io",
+          "pricing": "paid"
+        },
+        {
+          "id": 118,
+          "name": "Pika Free",
+          "url": "https://pika.art",
+          "pricing": "free"
+        },
+        {
+          "id": 119,
+          "name": "CapCut",
+          "url": "https://www.capcut.com/",
+          "pricing": "free"
+        },
+        {
+          "id": 120,
+          "name": "Luma Dream Machine",
+          "url": "https://luma.ai",
+          "pricing": "free"
+        },
+        {
+          "id": 121,
+          "name": "PixVerse",
+          "url": "https://pixverse.ai",
+          "pricing": "free"
+        },
+        {
+          "id": 122,
+          "name": "Haiper",
+          "url": "https://haiper.ai",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "Audio-to-Formatted-Text (Transcription)",
+      "icon": "\ud83c\udf99\ufe0f",
+      "tools": [
+        {
+          "id": 123,
+          "name": "Otter.ai Pro",
+          "url": "https://otter.ai/",
+          "pricing": "paid"
+        },
+        {
+          "id": 124,
+          "name": "Descript",
+          "url": "https://www.descript.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 125,
+          "name": "Fireflies.ai",
+          "url": "https://fireflies.ai/",
+          "pricing": "paid"
+        },
+        {
+          "id": 126,
+          "name": "Rev",
+          "url": "https://www.rev.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 127,
+          "name": "Otter Free",
+          "url": "https://otter.ai/",
+          "pricing": "free"
+        },
+        {
+          "id": 128,
+          "name": "OpenAI Whisper",
+          "url": "https://github.com/openai/whisper",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "Creative & Design Tools",
+      "icon": "\ud83d\udd8c\ufe0f",
+      "tools": [
+        {
+          "id": 129,
+          "name": "Adobe Photoshop",
+          "url": "https://adobe.com/products/photoshop.html",
+          "pricing": "paid"
+        },
+        {
+          "id": 130,
+          "name": "Adobe Illustrator",
+          "url": "https://adobe.com/products/illustrator.html",
+          "pricing": "paid"
+        },
+        {
+          "id": 131,
+          "name": "Adobe XD",
+          "url": "https://www.adobe.com/products/xd.html",
+          "pricing": "paid"
+        },
+        {
+          "id": 132,
+          "name": "Adobe After Effects",
+          "url": "https://www.adobe.com/products/aftereffects.html",
+          "pricing": "paid"
+        },
+        {
+          "id": 133,
+          "name": "Adobe Premiere Pro",
+          "url": "https://www.adobe.com/products/premiere.html",
+          "pricing": "paid"
+        },
+        {
+          "id": 134,
+          "name": "Autodesk Maya",
+          "url": "https://www.autodesk.com/products/maya/overview",
+          "pricing": "paid"
+        },
+        {
+          "id": 135,
+          "name": "Cinema 4D",
+          "url": "https://www.maxon.net/en/cinema-4d",
+          "pricing": "paid"
+        },
+        {
+          "id": 136,
+          "name": "Sketch",
+          "url": "https://sketch.com",
+          "pricing": "paid"
+        },
+        {
+          "id": 137,
+          "name": "Affinity Designer",
+          "url": "https://affinity.serif.com/en-gb/designer/",
+          "pricing": "paid"
+        },
+        {
+          "id": 138,
+          "name": "Figma",
+          "url": "https://figma.com",
+          "pricing": "free"
+        },
+        {
+          "id": 139,
+          "name": "Canva",
+          "url": "https://canva.com",
+          "pricing": "free"
+        },
+        {
+          "id": 140,
+          "name": "Blender",
+          "url": "https://blender.org",
+          "pricing": "free"
+        },
+        {
+          "id": 141,
+          "name": "Photopea",
+          "url": "https://photopea.com",
+          "pricing": "free"
+        },
+        {
+          "id": 142,
+          "name": "CapCut",
+          "url": "https://capcut.com",
+          "pricing": "free"
+        },
+        {
+          "id": 143,
+          "name": "DaVinci Resolve",
+          "url": "https://blackmagicdesign.com/products/davinciresolve",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "Social Media",
+      "icon": "\ud83d\udcf1",
+      "tools": [
+        {
+          "id": 144,
+          "name": "YouTube",
+          "url": "https://youtube.com",
+          "pricing": "free"
+        },
+        {
+          "id": 145,
+          "name": "Instagram",
+          "url": "https://instagram.com",
+          "pricing": "free"
+        },
+        {
+          "id": 146,
+          "name": "Twitter/X",
+          "url": "https://twitter.com",
+          "pricing": "free"
+        },
+        {
+          "id": 147,
+          "name": "Facebook",
+          "url": "https://facebook.com",
+          "pricing": "free"
+        },
+        {
+          "id": 148,
+          "name": "LinkedIn",
+          "url": "https://linkedin.com",
+          "pricing": "free"
+        },
+        {
+          "id": 149,
+          "name": "Reddit",
+          "url": "https://reddit.com",
+          "pricing": "free"
+        },
+        {
+          "id": 150,
+          "name": "Discord",
+          "url": "https://discord.com",
+          "pricing": "free"
+        },
+        {
+          "id": 151,
+          "name": "Telegram",
+          "url": "https://telegram.org",
+          "pricing": "free"
+        }
+      ]
+    }
+  ]
+}
