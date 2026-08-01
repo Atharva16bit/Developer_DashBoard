@@ -14,7 +14,7 @@
 ## 🌐 Live Demo
 
 **🔗 Website:**
-https://atharva16bit.github.io/Developer_Dashboard/
+[https://atharva16bit.github.io/Developer_Dashboard/](https://developer-dash-board.vercel.app/)
 
 ---
 
