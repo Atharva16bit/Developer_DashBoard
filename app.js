@@ -1,8 +1,3 @@
-// ============================================================
-// AI & Developer Dashboard — data-driven render + search/filter
-// Data source: tools.json (single source of truth, no hardcoded HTML)
-// ============================================================
-
 const state = {
   data: null,
   query: "",
@@ -10,6 +5,7 @@ const state = {
 };
 
 async function loadData() {
+  if (typeof toolsDataPromise !== "undefined") return toolsDataPromise;
   const res = await fetch("tools.json");
   if (!res.ok) throw new Error("Failed to load tools.json");
   return res.json();
@@ -18,9 +14,6 @@ async function loadData() {
 function favicon(url) {
   try {
     const host = new URL(url).hostname;
-    // DuckDuckGo's icon service: reliably returns 200 with a sensible
-    // fallback icon instead of 404ing on domains it doesn't recognize
-    // (unlike Google's newer faviconV2 backend).
     return `https://icons.duckduckgo.com/ip3/${host}.ico`;
   } catch {
     return "";
@@ -94,8 +87,8 @@ function renderSections(categories) {
 
     html += `<section id="cat-${slug(cat.name)}">
       <h2>${cat.icon} ${cat.name}</h2>
-      ${paid.length ? `<div class="tools"><p>Paid Tools</p>${paid.map(toolCard).join("")}</div>` : ""}
       ${free.length ? `<div class="tools"><p>Free Tools</p>${free.map(toolCard).join("")}</div>` : ""}
+      ${paid.length ? `<div class="tools"><p>Paid Tools</p>${paid.map(toolCard).join("")}</div>` : ""}
     </section>`;
   });
 
@@ -127,8 +120,10 @@ function attachControls() {
 
   filterButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      filterButtons.forEach((b) => b.classList.remove("is-active"));
-      btn.classList.add("is-active");
+      filterButtons.forEach((b) => {
+        b.classList.toggle("is-active", b === btn);
+        b.setAttribute("aria-pressed", b === btn ? "true" : "false");
+      });
       state.pricing = btn.dataset.pricing;
       render();
     });

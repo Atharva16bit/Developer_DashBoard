@@ -57,6 +57,12 @@
           "name": "Quillbot",
           "url": "https://quillbot.com/",
           "pricing": "free"
+        },
+        {
+          "id": 152,
+          "name": "Rytr",
+          "url": "https://rytr.me/",
+          "pricing": "free"
         }
       ]
     },
@@ -129,6 +135,12 @@
           "name": "Gemini",
           "url": "https://gemini.google.com",
           "pricing": "free"
+        },
+        {
+          "id": 153,
+          "name": "Perplexity Comet",
+          "url": "https://www.perplexity.ai/comet",
+          "pricing": "free"
         }
       ]
     },
@@ -171,6 +183,12 @@
           "name": "Google Learn About",
           "url": "https://learning.google.com/experiments/learn-about/",
           "pricing": "free"
+        },
+        {
+          "id": 154,
+          "name": "Duolingo Max",
+          "url": "https://www.duolingo.com/plus",
+          "pricing": "paid"
         }
       ]
     },
@@ -225,6 +243,12 @@
           "name": "Apple Notes",
           "url": "https://apps.apple.com/us/app/notes/id1110145109",
           "pricing": "free"
+        },
+        {
+          "id": 155,
+          "name": "Craft",
+          "url": "https://www.craft.do/",
+          "pricing": "paid"
         }
       ]
     },
@@ -273,6 +297,12 @@
           "name": "Zapier Free",
           "url": "https://zapier.com/",
           "pricing": "free"
+        },
+        {
+          "id": 156,
+          "name": "Workato",
+          "url": "https://www.workato.com/",
+          "pricing": "paid"
         }
       ]
     },
@@ -326,6 +356,18 @@
           "id": 49,
           "name": "GeeksforGeeks",
           "url": "https://www.geeksforgeeks.org/",
+          "pricing": "free"
+        },
+        {
+          "id": 157,
+          "name": "DataCamp",
+          "url": "https://www.datacamp.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 158,
+          "name": "Codecademy",
+          "url": "https://www.codecademy.com/",
           "pricing": "free"
         }
       ]
@@ -423,6 +465,12 @@
           "name": "Gamma Free",
           "url": "https://gamma.app/",
           "pricing": "free"
+        },
+        {
+          "id": 159,
+          "name": "Microsoft Copilot for PowerPoint",
+          "url": "https://www.microsoft.com/en-us/microsoft-365/microsoft-copilot",
+          "pricing": "paid"
         }
       ]
     },
@@ -531,6 +579,24 @@
           "name": "Netlify Free",
           "url": "https://netlify.com",
           "pricing": "free"
+        },
+        {
+          "id": 160,
+          "name": "Lovable",
+          "url": "https://lovable.dev/",
+          "pricing": "paid"
+        },
+        {
+          "id": 161,
+          "name": "Bolt.new",
+          "url": "https://bolt.new/",
+          "pricing": "paid"
+        },
+        {
+          "id": 162,
+          "name": "v0",
+          "url": "https://v0.dev/",
+          "pricing": "paid"
         }
       ]
     },
@@ -591,11 +657,17 @@
           "name": "Render Free",
           "url": "https://render.com/",
           "pricing": "free"
+        },
+        {
+          "id": 163,
+          "name": "Windsurf",
+          "url": "https://windsurf.com/",
+          "pricing": "paid"
         }
       ]
     },
     {
-      "name": "Developer Platforms & Cloud Deployment",
+      "name": "Cloud Dev Platforms",
       "icon": "\u2601\ufe0f",
       "tools": [
         {
@@ -747,6 +819,18 @@
           "name": "CivitAI",
           "url": "https://civitai.com",
           "pricing": "free"
+        },
+        {
+          "id": 164,
+          "name": "Flux",
+          "url": "https://blackforestlabs.ai/",
+          "pricing": "free"
+        },
+        {
+          "id": 165,
+          "name": "DALL-E 3",
+          "url": "https://openai.com/index/dall-e-3/",
+          "pricing": "paid"
         }
       ]
     },
@@ -813,11 +897,23 @@
           "name": "Haiper",
           "url": "https://haiper.ai",
           "pricing": "free"
+        },
+        {
+          "id": 166,
+          "name": "Veo 3.1",
+          "url": "https://deepmind.google/technologies/veo/",
+          "pricing": "paid"
+        },
+        {
+          "id": 167,
+          "name": "HeyGen",
+          "url": "https://www.heygen.com/",
+          "pricing": "paid"
         }
       ]
     },
     {
-      "name": "Audio-to-Formatted-Text (Transcription)",
+      "name": "Audio-to-Formatted-Text",
       "icon": "\ud83c\udf99\ufe0f",
       "tools": [
         {
@@ -854,6 +950,12 @@
           "id": 128,
           "name": "OpenAI Whisper",
           "url": "https://github.com/openai/whisper",
+          "pricing": "free"
+        },
+        {
+          "id": 168,
+          "name": "Fathom",
+          "url": "https://fathom.video/",
           "pricing": "free"
         }
       ]
@@ -1005,6 +1107,42 @@
           "name": "Telegram",
           "url": "https://telegram.org",
           "pricing": "free"
+        },
+        {
+          "id": 169,
+          "name": "TikTok",
+          "url": "https://www.tiktok.com/",
+          "pricing": "free"
+        },
+        {
+          "id": 170,
+          "name": "Threads",
+          "url": "https://www.threads.net/",
+          "pricing": "free"
+        }
+      ]
+    },
+    {
+      "name": "AI Music & Audio Generation",
+      "icon": "\ud83c\udfb5",
+      "tools": [
+        {
+          "id": 171,
+          "name": "Suno",
+          "url": "https://suno.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 172,
+          "name": "Udio",
+          "url": "https://www.udio.com/",
+          "pricing": "paid"
+        },
+        {
+          "id": 173,
+          "name": "ElevenLabs",
+          "url": "https://elevenlabs.io/",
+          "pricing": "paid"
         }
       ]
     }

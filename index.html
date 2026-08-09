@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>AI & Developer Dashboard — 150+ Curated AI & Dev Tools</title>
+    <title>AI & Developer Dashboard — 170+ Curated AI & Dev Tools</title>
     <meta
       name="description"
-      content="A curated, searchable directory of 150+ AI and developer tools across writing, research, coding, design, automation, and video. Free and paid options for every workflow."
+      content="Discover curated AI tools for coding, design, research, content, and automation — 170+ tools across 18 categories, all in one searchable directory."
     />
     <meta
       name="keywords"
@@ -15,16 +15,17 @@
     />
     <meta name="author" content="Your Name" />
     <meta name="robots" content="index, follow" />
+
     <link rel="canonical" href="https://your-domain.com/" />
 
     <meta property="og:type" content="website" />
     <meta
       property="og:title"
-      content="AI & Developer Dashboard — 150+ Curated AI & Dev Tools"
+      content="AI & Developer Dashboard — 170+ Curated AI & Dev Tools"
     />
     <meta
       property="og:description"
-      content="A searchable directory of 150+ AI and developer tools — writing, research, coding, design, automation, and more, all in one place."
+      content="A searchable directory of 170+ AI and developer tools — writing, research, coding, design, automation, and more, all in one place."
     />
     <meta
       property="og:image"
@@ -35,7 +36,7 @@
     <meta property="og:url" content="https://your-domain.com/" />
     <meta property="og:site_name" content="AI & Developer Dashboard" />
 
-    <!-- ============ Favicons ============ -->
+    <link rel="icon" type="image/png" href="assets/favicon-32x32.png" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -55,10 +56,13 @@
     />
     <link rel="manifest" href="assets/site.webmanifest" />
 
-    <!-- ============ Performance ============ -->
-    <link rel="preconnect" href="https://www.google.com" />
-    <link rel="dns-prefetch" href="https://www.google.com" />
-    <link rel="preload" href="tools.json" as="fetch" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif&display=swap"
+    />
     <link rel="stylesheet" href="style.css" />
 
     <!-- ============ Structured Data (JSON-LD) ============ -->
@@ -67,100 +71,371 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "AI & Developer Dashboard",
-        "description": "A curated, searchable directory of 150+ AI and developer tools.",
+        "description": "A curated, searchable directory of 170+ AI and developer tools.",
         "url": "https://your-domain.com/"
       }
     </script>
   </head>
-
   <body>
-    <header>
-      <div class="hero">
-        <h1>AI & Developer Dashboard</h1>
-        <p class="hero-tagline">
-          One Place for Coding, AI, Research, Creativity & Productivity
+    <div id="site-header-mount"></div>
+
+    <section id="page-home" class="page" aria-labelledby="hero-title">
+      <main class="hero">
+        <img
+          class="hero-mascot"
+          src="assets/robo-mascot.png"
+          alt="Developer Dashboard mascot"
+          width="92"
+          height="92"
+        />
+
+        <h1 id="hero-title">
+          Find the right AI tool.<br />
+          <span class="hero-subtitle gradient-text">
+            Stop the endless search.
+          </span>
+        </h1>
+
+        <p class="lede">
+          Discover curated AI tools for coding, design, research, content, and
+          automation — all in one searchable directory.
         </p>
-        <div class="hero-stats">
-          <span>151 Tools</span>
-          <span class="hero-dot" aria-hidden="true">•</span>
-          <span>17 Categories</span>
-          <span class="hero-dot" aria-hidden="true">•</span>
-          <span>Free &amp; Paid</span>
-        </div>
-        <a href="#category-nav" class="hero-scroll">
-          Explore Tools
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path d="M12 5v14M5 12l7 7 7-7" />
-          </svg>
-        </a>
-      </div>
-    </header>
 
-    <div class="sticky-header">
-      <div class="controls">
-        <div class="search-wrap">
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
+        <div class="hero-stats" aria-label="Directory statistics">
+          <div class="hero-stat">
+            <span class="stat-num gradient-text" id="stat-tools">170+</span>
+            <span class="stat-label">Tools Listed</span>
+          </div>
+
+          <div class="hero-stat">
+            <span class="stat-num gradient-text" id="stat-categories">
+              17
+            </span>
+
+            <span class="stat-label" id="stat-categories-label">
+              Categories
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#tools" data-page="tools" class="btn btn--primary">
+            Browse Tools
+          </a>
+
+          <a href="#categories" data-page="categories" class="btn btn--ghost">
+            Explore Categories
+          </a>
+        </div>
+      </main>
+    </section>
+
+    <section id="page-tools" class="page" hidden>
+      <div class="page-head">
+        <h1>Browse <span class="gradient-text--cool">Tools</span></h1>
+      </div>
+
+      <div class="sticky-header">
+        <div class="controls">
+          <div class="search-wrap">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="7"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Search tools by name…"
+              autocomplete="off"
+              aria-label="Search tools"
+            />
+          </div>
+          <div class="filter-group" role="group" aria-label="Filter by pricing">
+            <button
+              class="filter-btn is-active"
+              data-pricing="all"
+              type="button"
+              aria-pressed="true"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn"
+              data-pricing="free"
+              type="button"
+              aria-pressed="false"
+            >
+              Free
+            </button>
+            <button
+              class="filter-btn"
+              data-pricing="paid"
+              type="button"
+              aria-pressed="false"
+            >
+              Paid
+            </button>
+          </div>
+        </div>
+        <nav
+          class="category-nav"
+          id="category-nav"
+          aria-label="Jump to category"
+        ></nav>
+      </div>
+
+      <main id="sections-root"></main>
+
+      <p class="empty-state" id="empty-state" hidden>
+        No tools match your search. Try a different keyword or filter.
+      </p>
+
+      <p class="empty-state stats-count" id="stats-count"></p>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CATEGORIES                                                    -->
+    <!-- ============================================================ -->
+    <section id="page-categories" class="page" hidden>
+      <div class="page-head">
+        <h1>Explore <span class="gradient-text--cool">all categories</span></h1>
+        <p>170+ tools across 18 categories, all in one place.</p>
+      </div>
+
+      <div class="search-bar">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="7" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <input
+          id="category-search"
+          type="text"
+          placeholder="Search tools or categories"
+          autocomplete="on"
+        />
+      </div>
+
+      <div class="category-grid" id="category-grid"></div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- CONNECT                                                       -->
+    <!-- ============================================================ -->
+    <section id="page-connect" class="page" hidden>
+      <div class="connect-hero">
+        <h1>Get in <span class="gradient-text--soft">touch</span></h1>
+        <p>Reach out, and let's create a universe of possibilities together!</p>
+      </div>
+
+      <div class="connect-panel">
+        <div>
+          <h2>Let's Connect</h2>
+          <p>
+            Know an AI tool that's missing? Send your suggestion, share
+            feedback, or reach out to help make Developer Dashboard even better.
+          </p>
+
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/xkjwjndq"
+            method="POST"
           >
-            <circle cx="11" cy="11" r="7"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-          <input
-            id="search-input"
-            type="text"
-            placeholder="Search tools by name…"
-            autocomplete="off"
-            aria-label="Search tools"
+            <div class="form-row">
+              <div class="field">
+                <label for="first-name">First Name</label>
+                <input id="first-name" name="firstName" type="text" required />
+              </div>
+              <div class="field">
+                <label for="last-name">Last Name</label>
+                <input id="last-name" name="lastName" type="text" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="phone" type="tel" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <button class="submit-btn" type="submit">Send Message</button>
+            <p
+              id="form-status"
+              class="form-status"
+              role="status"
+              aria-live="polite"
+            ></p>
+          </form>
+        </div>
+
+        <div class="connect-visual">
+          <img
+            class="glow"
+            src="assets/make it happen.jpg"
+            alt="Make it happen — now and always"
           />
-        </div>
-        <div class="filter-group" role="group" aria-label="Filter by pricing">
-          <button class="filter-btn is-active" data-pricing="all" type="button">
-            All
-          </button>
-          <button class="filter-btn" data-pricing="free" type="button">
-            Free
-          </button>
-          <button class="filter-btn" data-pricing="paid" type="button">
-            Paid
-          </button>
+          <p class="tagline gradient-text">
+            Less Searching.<br />More Building.
+          </p>
         </div>
       </div>
+    </section>
 
-      <nav
-        class="category-nav"
-        id="category-nav"
-        aria-label="Jump to category"
-      ></nav>
-    </div>
+    <div id="site-footer-mount"></div>
 
-    <main id="sections-root">
-      <!-- Sections are rendered here dynamically from tools.json by app.js -->
-    </main>
+    <script src="components.js"></script>
+    <script>
+      // ---- Single-page routing: shows/hides the four <section class="page"> blocks ----
+      function showPage(id) {
+        document.querySelectorAll(".page").forEach((p) => {
+          p.hidden = p.id !== "page-" + id;
+        });
+        document.querySelectorAll("nav[data-nav] a[data-page]").forEach((a) => {
+          a.classList.toggle("is-active", a.dataset.page === id);
+        });
+        window.scrollTo(0, 0);
+      }
+      document.addEventListener("click", (e) => {
+        const a = e.target.closest("a[data-page]");
+        if (!a) return;
+        e.preventDefault();
+        const target = a.dataset.page;
+        showPage(target);
+        history.pushState(null, "", target === "home" ? "#" : "#" + target);
+        if (a.dataset.anchor) {
+          setTimeout(() => {
+            document
+              .getElementById(a.dataset.anchor)
+              ?.scrollIntoView({ behavior: "smooth" });
+          }, 50);
+        }
+      });
 
-    <p class="empty-state" id="empty-state" hidden>
-      No tools match your search. Try a different keyword or filter.
-    </p>
+      window.addEventListener("popstate", () => {
+        showPage(location.hash.replace("#", "") || "home");
+      });
 
-    <div class="stats">
-      <h3 id="stats-count">Total Tools Available: 150+</h3>
-    </div>
+      document.addEventListener("DOMContentLoaded", () => {
+        const initial = location.hash.replace("#", "") || "home";
+        mountLayout(initial); // injects header + footer from components.js
+        showPage(initial);
+      });
+    </script>
 
-    <footer>
-      <p>AI & Developer Dashboard © 2026</p>
-    </footer>
+    <script>
+      const toolsDataPromise = fetch("tools.json").then((r) => r.json());
+      toolsDataPromise
+        .then((data) => {
+          const total = data.categories.reduce((n, c) => n + c.tools.length, 0);
+          document.getElementById("stat-tools").textContent = total + "+";
+          document.getElementById("stat-categories").textContent =
+            data.categories.length;
+          document.getElementById("stat-categories-label").textContent =
+            data.categories.length === 1 ? "Category" : "Categories";
+        })
+        .catch(() => {});
 
+      // Categories: builds the category grid (icons come from tools.json)
+      toolsDataPromise.then((data) => {
+        const grid = document.getElementById("category-grid");
+        grid.innerHTML = data.categories
+          .map(
+            (c) => `
+            <a class="category-card" href="#tools" data-page="tools" data-anchor="cat-${slug(c.name)}">
+              <span class="icon">${c.icon || "🔧"}</span>
+              <h3>${c.name}</h3>
+              <span class="count">${c.tools.length} tools</span>
+            </a>`,
+          )
+          .join("");
+
+        document
+          .getElementById("category-search")
+          .addEventListener("input", (e) => {
+            const q = e.target.value.trim().toLowerCase();
+            grid.querySelectorAll(".category-card").forEach((card) => {
+              const match = card.textContent.toLowerCase().includes(q);
+              card.style.display = match ? "" : "none";
+            });
+          });
+      });
+    </script>
+
+    <!-- Connect: Formspree form handler (posts via fetch, shows inline status, no page redirect) -->
+    <script>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const form = e.target;
+          form.classList.add("was-validated");
+          if (!form.checkValidity()) return;
+
+          const statusEl = document.getElementById("form-status");
+          const submitBtn = form.querySelector(".submit-btn");
+          submitBtn.classList.add("btn--loading");
+          submitBtn.disabled = true;
+          statusEl.textContent = "";
+          statusEl.className = "form-status";
+
+          try {
+            const response = await fetch(form.action, {
+              method: "POST",
+              body: new FormData(form),
+              headers: { Accept: "application/json" },
+            });
+
+            if (response.ok) {
+              statusEl.textContent = "Thanks — your message is on its way!";
+              statusEl.classList.add("form-status--success");
+              form.reset();
+              form.classList.remove("was-validated");
+            } else {
+              const data = await response.json().catch(() => null);
+              statusEl.textContent =
+                data?.errors?.[0]?.message ||
+                "Something went wrong. Please try again.";
+              statusEl.classList.add("form-status--error");
+            }
+          } catch (err) {
+            statusEl.textContent =
+              "Network error — please check your connection and try again.";
+            statusEl.classList.add("form-status--error");
+          } finally {
+            submitBtn.classList.remove("btn--loading");
+            submitBtn.disabled = false;
+          }
+        });
+    </script>
+
+    <!-- Tools: search/filter/render logic (populates #sections-root from tools.json) -->
     <script src="app.js" defer></script>
   </body>
 </html>
