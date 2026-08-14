@@ -1,0 +1,364 @@
+name: Validate Developer Dashboard
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Validate required files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          required = [
+              "index.html",
+              "style.css",
+              "app.js",
+              "survey.js",
+              "tools.json",
+          ]
+
+          missing = [
+              file for file in required
+              if not Path(file).exists()
+          ]
+
+          if missing:
+              raise SystemExit(
+                  "ERROR: Missing required files:\n"
+                  + "\n".join(f"- {file}" for file in missing)
+              )
+
+          if Path("survey.css").exists():
+              raise SystemExit(
+                  "ERROR: survey.css exists. "
+                  "Survey styling should remain owned by survey.js."
+              )
+
+          print("Required project files are present.")
+          PY
+
+      - name: Validate tools.json
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("tools.json")
+
+          try:
+              data = json.loads(
+                  path.read_text(encoding="utf-8")
+              )
+          except json.JSONDecodeError as e:
+              raise SystemExit(
+                  f"ERROR: Invalid JSON: {e}"
+              )
+
+          if not isinstance(data, dict):
+              raise SystemExit(
+                  "ERROR: Root JSON value must be an object."
+              )
+
+          categories = data.get("categories")
+
+          if not isinstance(categories, list):
+              raise SystemExit(
+                  "ERROR: 'categories' must be an array."
+              )
+
+          tool_count = 0
+
+          for category in categories:
+              if not isinstance(category, dict):
+                  raise SystemExit(
+                      "ERROR: Every category must be an object."
+                  )
+
+              name = category.get("name")
+              tools = category.get("tools")
+
+              if not name:
+                  raise SystemExit(
+                      "ERROR: Category is missing 'name'."
+                  )
+
+              if not isinstance(tools, list):
+                  raise SystemExit(
+                      f"ERROR: Category '{name}' "
+                      "has no valid tools array."
+                  )
+
+              for tool in tools:
+                  if not isinstance(tool, dict):
+                      raise SystemExit(
+                          f"ERROR: Invalid tool "
+                          f"in category '{name}'."
+                      )
+
+                  for field in (
+                      "id",
+                      "name",
+                      "url",
+                      "pricing",
+                  ):
+                      if field not in tool:
+                          raise SystemExit(
+                              f"ERROR: Tool in '{name}' "
+                              f"is missing '{field}'."
+                          )
+
+                  if (
+                      not isinstance(tool["url"], str)
+                      or not tool["url"].startswith(
+                          ("http://", "https://")
+                      )
+                  ):
+                      raise SystemExit(
+                          f"ERROR: Invalid URL for "
+                          f"tool '{tool['name']}'."
+                      )
+
+                  tool_count += 1
+
+          print(f"Categories: {len(categories)}")
+          print(f"Tools: {tool_count}")
+
+          if not categories:
+              raise SystemExit(
+                  "ERROR: No categories found."
+              )
+
+          if not tool_count:
+              raise SystemExit(
+                  "ERROR: No tools found."
+              )
+
+          print("tools.json structure is valid.")
+          PY
+
+      - name: Validate HTML
+        run: |
+          python -m pip install --quiet html5validator
+          html5validator index.html
+
+      - name: Check tool URLs
+        run: |
+          python - <<'PY'
+          import json
+          import urllib.request
+          import urllib.error
+          from concurrent.futures import ThreadPoolExecutor
+          from concurrent.futures import as_completed
+
+          with open("tools.json", encoding="utf-8") as f:
+              data = json.load(f)
+
+          urls = [
+              tool["url"]
+              for category in data["categories"]
+              for tool in category["tools"]
+          ]
+
+          urls = list(dict.fromkeys(urls))
+
+          print(
+              f"Checking {len(urls)} unique tool URLs...\n"
+          )
+
+          def check_url(url):
+              headers = {
+                  "User-Agent": (
+                      "Developer-Dashboard-CI/1.0"
+                  )
+              }
+
+              request = urllib.request.Request(
+                  url,
+                  method="HEAD",
+                  headers=headers,
+              )
+
+              try:
+                  with urllib.request.urlopen(
+                      request,
+                      timeout=10
+                  ) as response:
+                      return (
+                          url,
+                          "PASS",
+                          response.status,
+                          None,
+                      )
+
+              except urllib.error.HTTPError as error:
+                  if error.code in {403, 405, 429}:
+                      try:
+                          request = urllib.request.Request(
+                              url,
+                              method="GET",
+                              headers=headers,
+                          )
+
+                          with urllib.request.urlopen(
+                              request,
+                              timeout=10
+                          ) as response:
+                              return (
+                                  url,
+                                  "PASS",
+                                  response.status,
+                                  None,
+                              )
+
+                      except urllib.error.HTTPError as retry_error:
+                          if retry_error.code in {
+                              403,
+                              405,
+                              429,
+                              451,
+                          }:
+                              return (
+                                  url,
+                                  "WARN",
+                                  retry_error.code,
+                                  None,
+                              )
+
+                          return (
+                              url,
+                              "FAIL",
+                              retry_error.code,
+                              str(retry_error),
+                          )
+
+                      except Exception as retry_error:
+                          return (
+                              url,
+                              "WARN",
+                              None,
+                              str(retry_error),
+                          )
+
+                  if error.code == 451:
+                      return (
+                          url,
+                          "WARN",
+                          error.code,
+                          None,
+                      )
+
+                  if error.code in {404, 410}:
+                      return (
+                          url,
+                          "FAIL",
+                          error.code,
+                          str(error),
+                      )
+
+                  return (
+                      url,
+                      "WARN",
+                      error.code,
+                      str(error),
+                  )
+
+              except Exception as error:
+                  return (
+                      url,
+                      "WARN",
+                      None,
+                      str(error),
+                  )
+
+          failures = []
+          warnings = []
+
+          with ThreadPoolExecutor(
+              max_workers=10
+          ) as executor:
+
+              futures = [
+                  executor.submit(check_url, url)
+                  for url in urls
+              ]
+
+              for future in as_completed(futures):
+                  url, result, status, error = (
+                      future.result()
+                  )
+
+                  if result == "PASS":
+                      print(
+                          f"PASS  {status}  {url}"
+                      )
+
+                  elif result == "WARN":
+                      print(
+                          f"WARN  {status or 'N/A'}  {url}"
+                      )
+
+                      if error:
+                          print(f"      {error}")
+
+                      warnings.append(
+                          (url, status, error)
+                      )
+
+                  else:
+                      print(
+                          f"FAIL  {status or 'N/A'}  {url}"
+                      )
+
+                      if error:
+                          print(f"      {error}")
+
+                      failures.append(
+                          (url, status, error)
+                      )
+
+          print()
+          print("----------------------------------------")
+          print(f"URLs checked: {len(urls)}")
+          print(f"Warnings:     {len(warnings)}")
+          print(f"Failures:    {len(failures)}")
+
+          if warnings:
+              print()
+              print(
+                  "Warnings are non-blocking because some "
+                  "third-party websites reject automated "
+                  "CI requests."
+              )
+
+          if failures:
+              print()
+              print("Broken URLs detected:")
+
+              for url, status, error in failures:
+                  print(
+                      f"- {url} "
+                      f"[{status or 'request failed'}]"
+                  )
+
+              raise SystemExit(1)
+
+          print()
+          print("URL validation passed.")
+          PY

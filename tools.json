@@ -181,7 +181,7 @@
         {
           "id": 26,
           "name": "Google Learn About",
-          "url": "https://learning.google.com/experiments/learn-about/",
+          "url": "https://learning.google.com/",
           "pricing": "free"
         },
         {
@@ -553,7 +553,7 @@
         {
           "id": 75,
           "name": "Replit Core",
-          "url": "https://replit.com/site/core",
+          "url": "https://replit.com/",
           "pricing": "paid"
         },
         {
@@ -679,7 +679,7 @@
         {
           "id": 90,
           "name": "Azure",
-          "url": "https://azure.microsoft.com",
+          "url": "https://azure.microsoft.com/en-us/",
           "pricing": "paid"
         },
         {
