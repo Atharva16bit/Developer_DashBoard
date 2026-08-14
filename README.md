@@ -2,19 +2,18 @@
 
 > A curated directory of **150+ AI and developer tools** organized by category, pricing, and use case. Built with **Vanilla HTML, CSS, and JavaScript**, this project provides a fast, responsive, and dependency-free way to discover the best AI tools for development, productivity, research, design, automation, and more.
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge\&logo=html5\&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge\&logo=css3\&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge\&logo=javascript\&logoColor=black)
-![Responsive](https://img.shields.io/badge/Responsive-Yes-success?style=for-the-badge)
-![Vanilla JS](https://img.shields.io/badge/Framework-None-blue?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Responsive](https://img.shields.io/badge/Responsive-Yes-success?style=for-the-badge)](#)
+[![Vanilla JS](https://img.shields.io/badge/Framework-None-blue?style=for-the-badge)](#)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](#-license)
 
 ---
 
 ## 🌐 Live Demo
 
-**🔗 Website:**
-[https://atharva16bit.github.io/Developer_Dashboard/](https://developer-dash-board.vercel.app/)
+**🔗 Website:** [https://developer-dash-board.vercel.app/](https://developer-dash-board.vercel.app/)
 
 ---
 
@@ -34,43 +33,35 @@ The goal is to provide developers, students, creators, professionals, and busine
 
 # ✨ Features
 
-* 🔍 Instant live search across 150+ AI tools
-* 🏷️ Filter by Free, Paid, or All tools
-* 🧭 Category-based navigation with active section highlighting
-* ⚡ Dynamic rendering from a JSON database
-* 🎨 Automatic favicon loading with initials fallback
-* 📱 Fully responsive across desktop, tablet, and mobile devices
-* 🚀 Zero frameworks or external UI libraries
-* 📂 Easily extendable by editing a single JSON file
-* 🌙 Modern dark UI with clean typography
-* ⚙️ Lightweight and fast-loading architecture
+- 🔍 Instant live search across 150+ AI tools
+- 🏷️ Filter by Free, Paid, or All tools
+- 🧭 Category-based navigation with active section highlighting
+- ⚡ Dynamic rendering from a JSON database
+- 🎨 Automatic favicon loading with initials fallback
+- 📱 Fully responsive across desktop, tablet, and mobile devices
+- 🚀 Zero frameworks or external UI libraries
+- 📂 Easily extendable by editing a single JSON file
+- 🌙 Modern dark UI with clean typography
+- ⚙️ Lightweight and fast-loading architecture
 
 ---
 
 # 🖼️ Preview
 
-> **Add your project screenshot here**
+![Developer Dashboard preview](./assets/preview.png)
 
-```
-/assets/preview.png
-```
-
-or
-
-```
-README Images/dashboard-preview.png
-```
+> Replace `./assets/preview.png` with an actual screenshot of the live site before pushing. A GIF of the search/filter in action works even better here.
 
 ---
 
 # 🛠 Tech Stack
 
-* HTML5
-* CSS3
-* JavaScript (ES6+)
-* JSON
-* Git
-* GitHub Pages
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- JSON
+- Git
+- GitHub Pages / Vercel
 
 ---
 
@@ -122,16 +113,16 @@ Developer Dashboard
 # 📂 Project Structure
 
 ```
-Developer_Dashboard/
+Developer_DashBoard/
 │
 ├── index.html
 ├── style.css
 ├── app.js
 ├── tools.json
 │
-├── Assets/
-│   ├── Icons/
-│   ├── Images/
+├── assets/
+│   ├── icons/
+│   ├── images/
 │   └── preview.png
 │
 └── README.md
@@ -143,25 +134,25 @@ Developer_Dashboard/
 
 Clone the repository
 
-```bash
-git clone https://github.com/atharva16bit/Developer_Dashboard.git
+```
+git clone https://github.com/Atharva16bit/Developer_DashBoard.git
 ```
 
 Navigate into the project
 
-```bash
-cd Developer_Dashboard
+```
+cd Developer_DashBoard
 ```
 
 Run a local development server
 
-```bash
+```
 python -m http.server
 ```
 
 or
 
-```bash
+```
 python3 -m http.server
 ```
 
@@ -197,77 +188,77 @@ The new tool is rendered automatically without editing any HTML.
 
 # 💡 Technical Highlights
 
-* Data-driven UI architecture
-* Dynamic DOM rendering
-* Fetch API
-* Modular JSON dataset
-* Vanilla JavaScript only
-* Responsive CSS Grid
-* Responsive Flexbox layouts
-* Intersection Observer API
-* Live search implementation
-* Automatic favicon retrieval
-* Error handling with graceful fallbacks
-* Zero external dependencies
+- Data-driven UI architecture
+- Dynamic DOM rendering
+- Fetch API
+- Modular JSON dataset
+- Vanilla JavaScript only
+- Responsive CSS Grid
+- Responsive Flexbox layouts
+- Intersection Observer API
+- Live search implementation
+- Automatic favicon retrieval
+- Error handling with graceful fallbacks
+- Zero external dependencies
 
 ---
 
 # 🧠 Skills Demonstrated
 
-* HTML5
-* CSS3
-* JavaScript ES6+
-* DOM Manipulation
-* Fetch API
-* JSON Data Modeling
-* Responsive Web Design
-* Component-Based UI
-* Event Handling
-* Search Algorithms
-* Dynamic Rendering
-* State Management
-* Progressive Enhancement
-* Git & GitHub
+- HTML5
+- CSS3
+- JavaScript ES6+
+- DOM Manipulation
+- Fetch API
+- JSON Data Modeling
+- Responsive Web Design
+- Component-Based UI
+- Event Handling
+- Search Algorithms
+- Dynamic Rendering
+- State Management
+- Progressive Enhancement
+- Git & GitHub
 
 ---
 
 # 🚧 Challenges Solved
 
-* Rendering a large collection of tools dynamically
-* Maintaining a clean data-driven architecture
-* Building fast client-side search
-* Creating responsive layouts for all screen sizes
-* Handling missing favicons gracefully
-* Synchronizing category navigation with page scrolling
-* Keeping the application lightweight without frameworks
+- Rendering a large collection of tools dynamically
+- Maintaining a clean data-driven architecture
+- Building fast client-side search
+- Creating responsive layouts for all screen sizes
+- Handling missing favicons gracefully
+- Synchronizing category navigation with page scrolling
+- Keeping the application lightweight without frameworks
 
 ---
 
 # 🛣 Roadmap
 
-* ⭐ Favorite tools
-* 📋 Copy tool links
-* 🏷️ Tags and advanced filtering
-* 🌙 Light mode
-* 🔄 Sort by popularity
-* 📊 Tool ratings
-* 🔍 Multi-filter search
-* 📱 Progressive Web App (PWA)
-* 🌐 API-powered tool updates
-* 🤝 Community contributions
+- ⭐ Favorite tools
+- 📋 Copy tool links
+- 🏷️ Tags and advanced filtering
+- 🌙 Light mode
+- 🔄 Sort by popularity
+- 📊 Tool ratings
+- 🔍 Multi-filter search
+- 📱 Progressive Web App (PWA)
+- 🌐 API-powered tool updates
+- 🤝 Community contributions
 
 ---
 
 # ⚡ Performance
 
-* No Frameworks
-* No Build Tools
-* No Package Manager
-* Lightweight
-* Fast Initial Load
-* Static Website
-* Easy Deployment
-* GitHub Pages Ready
+- No Frameworks
+- No Build Tools
+- No Package Manager
+- Lightweight
+- Fast Initial Load
+- Static Website
+- Easy Deployment
+- GitHub Pages / Vercel Ready
 
 ---
 
@@ -285,7 +276,7 @@ You are free to use, modify, and distribute this project under the terms of the 
 
 Second-Year B.Tech Computer Science Engineering Student focused on Full-Stack Development, AI Engineering, Cybersecurity, and Scalable Software Systems.
 
-GitHub: https://github.com/atharva16bit
+GitHub: [https://github.com/Atharva16bit](https://github.com/Atharva16bit)
 
 ---
 
