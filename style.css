@@ -1009,19 +1009,13 @@ small,
 
 .sticky-header {
   position: sticky;
-  top: var(--header-height);
+  top: 0;
   z-index: 20;
-  padding-top: var(--space-3);
-  background: linear-gradient(var(--background) 70%, transparent);
-}
-
-.sticky-header {
-  position: sticky;
-  top: var(--header-height);
-  z-index: 20;
-  margin-top: 0;
-  padding-top: var(--space-3);
-  background: linear-gradient(var(--background) 70%, transparent);
+  width: 100%;
+  margin: 0;
+  padding: 16px 0;
+  background: var(--background);
+  border: 0;
 }
 
 .controls {
@@ -1609,17 +1603,6 @@ footer,
    FINAL TOOLS CONTROLS FIX
    Add this at the very bottom of style.css
    ========================================================= */
-
-#page-tools .sticky-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  width: 100%;
-  margin: 0;
-  padding: 16px 0;
-  background: var(--background);
-  border: 0;
-}
 
 #page-tools .controls {
   width: min(92%, 1160px);
