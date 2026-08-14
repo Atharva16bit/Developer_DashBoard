@@ -1,8 +1,63 @@
 const state = {
   data: null,
   query: "",
-  pricing: "all", // 'all' | 'paid' | 'free'
+  pricing: "all",
+  surveyIntent: null,
 };
+
+const SURVEY_CATEGORY_GROUPS = {
+  build: [
+    "Coding & Development",
+    "Website & App Development",
+    "Automation, Coding & Deployment",
+    "Cloud Dev Platforms",
+  ],
+
+  write: [
+    "Writing",
+    "Deep Research",
+    "Tutorial",
+    "Learning Platforms",
+    "Note Taking",
+  ],
+
+  create: [
+    "AI Image Generation",
+    "Creative & Design Tools",
+    "AI Video Generation",
+    "Audio-to-Formatted-Text",
+    "AI Music & Audio Generation",
+  ],
+
+  run: [
+    "Presentation",
+    "Accounting & Finance",
+    "Business, Client & Workflow (CRM)",
+    "Social Media",
+  ],
+};
+
+// Derived from SURVEY_CATEGORY_GROUPS itself (rather than a second,
+// separately-maintained list) so the two can never drift out of sync —
+// flattening build -> write -> create -> run keeps each survey theme's
+// categories adjacent, matching the comment in survey.js.
+const CATEGORY_ORDER = [
+  ...SURVEY_CATEGORY_GROUPS.build,
+  ...SURVEY_CATEGORY_GROUPS.write,
+  ...SURVEY_CATEGORY_GROUPS.create,
+  ...SURVEY_CATEGORY_GROUPS.run,
+];
+
+function orderCategories(categories) {
+  const rank = new Map(CATEGORY_ORDER.map((name, i) => [name, i]));
+  // Categories not listed above (e.g. a new one added to tools.json later)
+  // keep appearing, just pushed to the end instead of disappearing.
+  return [...categories].sort((a, b) => {
+    const ra = rank.has(a.name) ? rank.get(a.name) : CATEGORY_ORDER.length;
+    const rb = rank.has(b.name) ? rank.get(b.name) : CATEGORY_ORDER.length;
+    return ra - rb;
+  });
+}
 
 async function loadData() {
   if (typeof toolsDataPromise !== "undefined") return toolsDataPromise;
@@ -105,9 +160,34 @@ function renderSections(categories) {
 
 function render() {
   if (!state.data) return;
-  renderSections(state.data.categories);
+
+  let categoriesToShow = state.data.categories;
+
+  if (state.surveyIntent) {
+    const allowedCategories = SURVEY_CATEGORY_GROUPS[state.surveyIntent] || [];
+
+    categoriesToShow = state.data.categories.filter((category) =>
+      allowedCategories.includes(category.name),
+    );
+  }
+
+  renderSections(categoriesToShow);
   observeActiveSection();
 }
+
+window.applySurveyRecommendation = function (intentId, pricingId = "all") {
+  state.surveyIntent = intentId;
+  state.pricing = pricingId;
+
+  document.querySelectorAll(".filter-btn").forEach((button) => {
+    const active = button.dataset.pricing === pricingId;
+
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+
+  render();
+};
 
 function attachControls() {
   const searchInput = document.getElementById("search-input");
@@ -164,6 +244,7 @@ function observeActiveSection() {
   root.innerHTML = `<p class="loading-state">Loading tools…</p>`;
   try {
     state.data = await loadData();
+    state.data.categories = orderCategories(state.data.categories);
     renderNav(state.data.categories);
     render();
     attachControls();

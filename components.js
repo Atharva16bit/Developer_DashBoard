@@ -45,10 +45,20 @@ function renderHeader(activePage) {
   `;
 }
 
-function renderFooter() {
-  return `
+if (footerMount) {
+  footerMount.innerHTML = `
     <footer class="site-footer">
-      <p>Developer Dashboard &copy; 2026 &mdash; a curated directory of AI &amp; developer tools.</p>
+      <div class="footer-content">
+        <p class="footer-copyright">
+          © 2026 Developer Dashboard. All rights reserved.
+        </p>
+
+        <p class="footer-disclaimer">
+          An independent directory of AI &amp; developer tools. Product names,
+          logos, and trademarks belong to their respective owners. No
+          affiliation or endorsement is implied.
+        </p>
+      </div>
     </footer>
   `;
 }

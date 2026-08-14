@@ -430,13 +430,12 @@ small,
    7. NAVBAR
    ========================================================================= */
 .site-header {
-  width: 100%;
+  width: min(94%, var(--container-wide));
   padding: 16px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 32px;
-  max-width: 1400px;
+  gap: 24px;
   margin: 0 auto;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
@@ -1782,4 +1781,30 @@ footer,
 #page-categories #category-search:focus {
   border-color: var(--primary);
   box-shadow: var(--shadow-focus);
+}
+.site-footer {
+  width: 100%;
+  margin-top: 4rem;
+  padding: 2rem 1.25rem;
+  color: #aab2c8;
+  background: #0b1020;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-content {
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.footer-disclaimer {
+  max-width: 850px;
+  margin: 0.8rem auto 0 !important;
+  font-size: 0.82rem;
+  color: #7f8aa5;
 }
