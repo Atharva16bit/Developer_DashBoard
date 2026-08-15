@@ -50,8 +50,6 @@ The goal is to provide developers, students, creators, professionals, and busine
 
 ![Developer Dashboard preview](./assets/preview.png)
 
-> Replace `./assets/preview.png` with an actual screenshot of the live site before pushing. A GIF of the search/filter in action works even better here.
-
 ---
 
 # 🛠 Tech Stack
