@@ -663,6 +663,12 @@
           "name": "Windsurf",
           "url": "https://windsurf.com/",
           "pricing": "paid"
+        },
+        {
+          "id": 174,
+          "name": "Agent QA",
+          "url": "https://github.com/vostride/agent-qa",
+          "pricing": "free"
         }
       ]
     },
